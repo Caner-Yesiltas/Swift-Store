@@ -4,19 +4,21 @@ import React from 'react';
 import Home from './pages/Home.tsx';
 import FavoritesPage from './pages/FavoritesPage.tsx';
 import NavBar from './components/NavBar.tsx';
-
+import { Provider } from 'react-redux';
+import { store } from './app/store.ts';
 
 function App() {
   return (
-    <div className="bg-slate-300 min-h-screen text-center"
->
-      <BrowserRouter>
-      <NavBar />
-        <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/favorites' element={<FavoritesPage/>} />
-        </Routes>
-      </BrowserRouter>
+    <div className='bg-gray-300 min-h-screen'>
+      <Provider store={store}>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/favorites' element={<FavoritesPage />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
     </div>
   );
 }

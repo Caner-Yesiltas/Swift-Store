@@ -1,32 +1,65 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
-import type { RootState } from '../app/store'
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
 
-
-interface ProductsState {
-  value: number
+export interface Product {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  discountPercentage: number;
+  rating: number;
+  stock: number;
+  brand: string;
+  category: string;
+  thumbnail: string;
+  images: string[];
 }
-
+interface ProductsState {
+  loading: boolean;
+  error: boolean;
+  favorites: Product[];
+  productsList: Product[];
+}
 
 const initialState: ProductsState = {
-  value: 0,
-}
+  loading: false,
+  error: false,
+  favorites: [],
+  productsList: [],
+};
 
 export const productsSlice = createSlice({
   name: 'products',
 
   initialState,
   reducers: {
-    
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload
+    fetchStart(state) {
+      state.loading = true;
+      state.error = false;
     },
+    getSuccesProduct(state, action: PayloadAction<Product[]>) {
+      state.loading = false;
+      state.error = false;
+      state.productsList = action.payload;
+    },
+
+    addFavorites(state, action:PayloadAction<Product>) {
+        state.favorites = [...state.favorites, action.payload]
+    },
+    
+    removeFavorites(state, action:PayloadAction<Product[]>){
+        state.favorites = action.payload
+    },
+
+    fetchFail(state) {
+        state.loading = false;
+        state.error = true;
+      },
+
+ 
   },
-})
+});
 
-export const { increment, decrement, incrementByAmount } = productsSlice.actions
+export const { fetchStart, getSuccesProduct, addFavorites, removeFavorites,fetchFail } = productsSlice.actions;
 
-
-export const selectCount = (state: RootState) => state.products.value
-
-export default productsSlice.reducer
+export default productsSlice.reducer;
