@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import SearchComp from '../components/SearchComp.tsx';
 import axios from 'axios';
 import { fetchFail, fetchStart, getSuccesProduct, Product } from '../features/productsSlice.ts';
 import { useAppDispatch } from '../app/hooks.ts';
+import { EventFunc } from '../models/models.ts';
 
 export interface Products {
   products: Product[];
@@ -25,17 +26,23 @@ const Home = () => {
     } catch (error) {
       dispatch(fetchFail())
     }
+    
   };
 
   useEffect(() => {
     getData()
   }, [search])
   
+// const handleChange = (e:React.ChangeEvent<HTMLInputElement>) =>{
+// setSearch(e.target.value)
 
+const handleChange:EventFunc = (e) => {
+  setSearch(e.target.value)
+}
 
   return (
     <div>
-      <SearchComp />
+      <SearchComp handleChange={handleChange} />
     </div>
   );
 };
