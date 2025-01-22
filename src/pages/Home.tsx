@@ -4,6 +4,7 @@ import axios from 'axios';
 import { fetchFail, fetchStart, getSuccesProduct,} from '../features/productsSlice.ts';
 import { useAppDispatch, useAppSelector } from '../app/hooks.ts';
 import { EventFunc, Products } from '../models/models.ts';
+import Card from '../components/Card.tsx';
 
 const Home = () => {
   const [search, setSearch] = useState('');
@@ -42,9 +43,9 @@ const Home = () => {
           <p className="text-center text-white-50">Something Went Wrong...</p>
         </div>
       ) : (
-        <div>
+        <div className='flex justify-center items-center flex-wrap gap-5 p-5' >
           {productsList.map((item) => (
-            <p key={item.id}>{item.title}</p>
+           <Card key={item.id} text="Add to favorites" handleFunc={handleAdd}/>
           ))}
         </div>
       )}
