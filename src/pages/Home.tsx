@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SearchComp from '../components/SearchComp.tsx';
 import axios from 'axios';
-import { fetchFail, fetchStart, getSuccesProduct,} from '../features/productsSlice.ts';
+import { addFavorites, fetchFail, fetchStart, getSuccesProduct,} from '../features/productsSlice.ts';
 import { useAppDispatch, useAppSelector } from '../app/hooks.ts';
 import { EventFunc, Products } from '../models/models.ts';
 import Card from '../components/Card.tsx';
@@ -9,7 +9,13 @@ import Card from '../components/Card.tsx';
 const Home = () => {
   const [search, setSearch] = useState('');
   const dispatch = useAppDispatch();
-  const {loading, error, productsList} = useAppSelector(state => state.products)
+  const {loading, error, productsList, favorites} = useAppSelector(state => state.products)
+
+  const handleAdd = (product) =>{
+if(favorites.filter(item=> item.id === product.id).length===0){
+  dispatch(addFavorites(product))
+}
+  }
 
   const getData = async () => {
     dispatch(fetchStart());
@@ -45,7 +51,7 @@ const Home = () => {
       ) : (
         <div className='flex justify-center items-center flex-wrap gap-5 p-5' >
           {productsList.map((item) => (
-           <Card key={item.id} text="Add to favorites" handleFunc={handleAdd}/>
+           <Card key={item.id} text="Add to favorites" handleFunc={handleAdd} item={item} />
           ))}
         </div>
       )}
