@@ -19,3 +19,5 @@ export interface Product {
   thumbnail: string;
   images: string[];
 }
+
+export type VoidFunc = (product:Product) => void;
