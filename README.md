@@ -7,7 +7,7 @@
 </div>
 
 <div align="center">
-  <img src="Swift-Store.gif" alt="Swift Store Demo" width="800"/>
+  <img src="/assets/Swift-Store.gif" alt="Swift Store Demo" width="800"/>
 </div>
 
 ## 🚀 About The Project
