@@ -52,6 +52,7 @@ yarn start
 ```
 
 ## 📁 Project Structure
+
 ```
 src/
 ├── app/              # Redux store configuration
@@ -77,6 +78,7 @@ src/
 ## 🔍 Core Features
 
 ### Product Management
+
 - Search products in real-time
 - View detailed product information
 - Add products to favorites
@@ -84,24 +86,28 @@ src/
 - Toast notifications for user actions
 
 ### State Management
+
 - Centralized Redux store
 - TypeScript type safety
 - Async operations with Redux Toolkit
 - Custom hooks for state access
 
 ### Styling & Theme
+
 - Responsive Tailwind CSS design
 - Custom component styling
 - Modern UI elements
 - Consistent color scheme
 
 ### API Integration
+
 - RESTful API operations with Axios
 - Product search functionality
 - Error handling
 - Loading states
 
 ## 📱 Responsive Design
+
 - Mobile-first approach
 - Flexible grid system
 - Responsive components
