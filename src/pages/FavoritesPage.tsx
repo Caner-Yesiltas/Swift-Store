@@ -19,6 +19,9 @@ const FavoritesPage = () => {
 
   return (
     <div>
+      <h1 className='font-bold text-2xl text-whıte text-center m-3' >
+      My Favorites Products
+      </h1>
       <div className='flex justify-center items-center flex-wrap gap-5 p-5'>
         {favorites.map((item) => (
           <Card
@@ -28,6 +31,9 @@ const FavoritesPage = () => {
             handleFunc={handleRemove}
           />
         ))}
+        {favorites.length === 0 && (<h3 className='text-2xl text-center text-orange-950'>
+          No favorites products yet
+        </h3> )}
       </div>
     </div>
   );
