@@ -5,6 +5,7 @@ import { addFavorites, fetchFail, fetchStart, getSuccesProduct,} from '../featur
 import { useAppDispatch, useAppSelector } from '../app/hooks.ts';
 import { EventFunc, Products } from '../models/models.ts';
 import Card from '../components/Card.tsx';
+import { toastSuccessNotify, toastWarnNotify } from '../helper/ToastNotify.tsx';
 
 const Home = () => {
   const [search, setSearch] = useState('');
@@ -14,6 +15,9 @@ const Home = () => {
   const handleAdd = (product) =>{
 if(favorites.filter(item=> item.id === product.id).length===0){
   dispatch(addFavorites(product))
+  toastSuccessNotify('Product added to favorites')
+} else{
+  toastWarnNotify('Product already in favorites')
 }
   }
 

@@ -6,6 +6,7 @@ import FavoritesPage from './pages/FavoritesPage.tsx';
 import NavBar from './components/NavBar.tsx';
 import { Provider } from 'react-redux';
 import { store } from './app/store.ts';
+import { Flip, ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </Provider>
+      <ToastContainer transition={Flip}   />
     </div>
   );
 }
