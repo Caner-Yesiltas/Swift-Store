@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+<div align="center">
+  <h1>🛍️ Swift Store</h1>
+  
+  <h3>
+    👉 <a href="[your-live-demo-url]">Live Demo</a> 👈
+  </h3>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <img src="[your-project-gif-url]" alt="Swift Store Demo" width="800"/>
+</div>
 
-## Available Scripts
+## 🚀 About The Project
 
-In the project directory, you can run:
+Swift Store is a modern e-commerce application built with React and TypeScript. The application features a clean, responsive interface where users can search products, add them to favorites, and manage their favorite items. With real-time search capabilities and smooth state management, Swift Store provides an excellent shopping experience.
 
-### `yarn start`
+### ✨ Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+• 🔍 Real-time product search functionality
+• ❤️ Add/remove products to favorites
+• 🎯 Product management with Redux Toolkit
+• 🔄 Dynamic product filtering
+• 📱 Fully responsive Tailwind design
+• 🔔 Toast notifications for user actions
+• 🎨 Clean and modern UI design
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🛠️ Built With
 
-### `yarn test`
+• [React](https://reactjs.org/)
+• [TypeScript](https://www.typescriptlang.org/)
+• [Redux Toolkit](https://redux-toolkit.js.org/)
+• [Tailwind CSS](https://tailwindcss.com/)
+• [React Router](https://reactrouter.com/)
+• [Axios](https://axios-http.com/)
+• [React Toastify](https://fkhadra.github.io/react-toastify/)
+• [DummyJSON API](https://dummyjson.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 💻 Getting Started
 
-### `yarn build`
+```bash
+# Clone the repository
+git clone [your-repo-url]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Navigate to project directory
+cd swift-store
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Install dependencies
+yarn install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Start the development server
+yarn start
+```
 
-### `yarn eject`
+## 📁 Project Structure
+```
+src/
+├── app/              # Redux store configuration
+│   ├── hooks.ts
+│   └── store.ts
+├── components/       # UI components
+│   ├── Card.tsx
+│   ├── NavBar.tsx
+│   └── SearchComp.tsx
+├── features/         # Redux slices
+│   └── productsSlice.ts
+├── helper/           # Utility functions
+│   └── ToastNotify.tsx
+├── models/           # TypeScript interfaces
+│   └── models.ts
+├── pages/           # Page components
+│   ├── Home.tsx
+│   └── FavoritesPage.tsx
+└── styles/          # CSS styling
+    └── App.css
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔍 Core Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Product Management
+• Search products in real-time
+• View detailed product information
+• Add products to favorites
+• Remove products from favorites
+• Toast notifications for user actions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### State Management
+• Centralized Redux store
+• TypeScript type safety
+• Async operations with Redux Toolkit
+• Custom hooks for state access
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Styling & Theme
+• Responsive Tailwind CSS design
+• Custom component styling
+• Modern UI elements
+• Consistent color scheme
 
-## Learn More
+### API Integration
+• RESTful API operations with Axios
+• Product search functionality
+• Error handling
+• Loading states
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📱 Responsive Design
+• Mobile-first approach
+• Flexible grid system
+• Responsive components
+• Cross-device compatibility
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📝 License
 
-### Code Splitting
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📫 Contact
 
-### Analyzing the Bundle Size
+Caner Yesiltas - [caneryesiltas1@gmail.com](mailto:caneryesiltas1@gmail.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Project Link: [your-project-url]
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div align="center">
+  Made with 🛍️ by Caner Yesiltas
+</div>
