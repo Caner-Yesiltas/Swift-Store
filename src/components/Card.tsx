@@ -48,7 +48,7 @@ const Card: React.FC<ICard> = ({ item, text, handleFunc }) => {
         alt={item.title}
       />
       <div className='flex justify-between items-center bg-gray-700'>
-        <h2 className='text-gray-100 font-bold m-3'>{item.price}</h2>
+        <h2 className='text-gray-100 font-bold m-3'>{item.price} $</h2>
         
         <div className='flex items-center gap-2 m-2'>
           {/* Quantity Controls */}
