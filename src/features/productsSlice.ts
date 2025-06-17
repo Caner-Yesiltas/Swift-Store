@@ -67,6 +67,21 @@ addToCart(state, action: PayloadAction<Product>) {
       }
     },
 
+
+
+      clearCart(state) {
+      state.cart = [];
+      state.quantities = {};
+    },
+
+
+    removeFromCart(state, action: PayloadAction<string>) {
+      const productId = action.payload;
+      state.cart = state.cart.filter(item => item.product.id !== productId);
+      delete state.quantities[productId];
+    },
+
+
     fetchFail(state) {
         state.loading = false;
         state.error = true;
@@ -76,6 +91,6 @@ addToCart(state, action: PayloadAction<Product>) {
   },
 });
 
-export const { fetchStart, getSuccesProduct, addFavorites, removeFavorites, fetchFail, updateQuantity, addToCart   } = productsSlice.actions;
+export const { fetchStart, getSuccesProduct, addFavorites, removeFavorites, fetchFail, updateQuantity, addToCart, clearCart,  removeFromCart   } = productsSlice.actions;
 
 export default productsSlice.reducer;
