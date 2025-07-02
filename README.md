@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🛍️ Swift Store</h1>
+  <h1>🛍️ Swift Store (E-Commerce Application)</h1>
   
   <h3>
     👉 <a href="https://swift-store-rho.vercel.app/">Live Demo</a> 👈
